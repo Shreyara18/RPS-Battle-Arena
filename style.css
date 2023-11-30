@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-family: 'Roboto';
+}
+
+:root {
+  --green: #8CC461;
+  --inside-green: #1da82b;
+  --mid-green: #1da82b90;
+  --outside-green: #2E9A2563;
+  --dark-green: #004429;
+  --gray: #656565;
+  --white: #FFF;
+  --black: #252525;
+}
+
+.main-screen {
+  width: 100vw;
+  height: 100vh;
+  background: var(--green);
+  color: var(--white);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  width: 100%;
+}
+
+.scoreBoard {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+  padding: 15px 15px;
+  border: 3px solid var(--white);
+  border-radius: 1.2rem;
+}
+
+h1 {
+  letter-spacing: 0.2rem;
+  font-weight: 800;
+}
+
+.scoreDisplay {
+  display: flex;
+  width: 38%;
+  gap: 2rem;
+
+}
+
+
+.PCscoreCount,
+.playerScoreCount {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: var(--gray);
+  letter-spacing: 0.2rem;
+  border-radius: 0.6rem;
+  width: 60%;
+  background-color: var(--white);
+  padding: 1.0rem;
+}
+
+.PCscore,
+.playerScore {
+  justify-self: flex-end;
+  font-size: 2.6rem;
+  color: var(--black);
+  font-weight: 900;
+
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  height: 65%;
+  width: 100%;
+  margin-top: 3%;
+}
+
+.gameZone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  position: relative;
+  margin-top: 0.4rem;
+}
+
+.gameZone-top {
+  height: 40%;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+#line1,
+#line2,
+#line3 {
+  position: absolute;
+  z-index: -1;
+}
+
+#line1 {
+  top: 28%;
+  left: 38%;
+  width: 30%;
+
+}
+
+#line2 {
+  top: 36%;
+  left: 54%;
+  width: 14%;
+
+}
+
+#line3 {
+  top: 35%;
+  left: 33%;
+  width: 14%;
+
+}
+
+.signs,
+.side-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.signs {
+  border-radius: 55%;
+  z-index: 2;
+}
+
+
+#rock {
+  background-image: url("./resources/Group\ 2.png");
+
+}
+
+#scissor {
+  background-image: url("./resources/Group\ 3.png")
+}
+
+#paper {
+  background-image: url("./resources/Group\ 1.png");
+}
+
+.resultZone {
+  height: 90%;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  width: 30%;
+}
+
+.result-text {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 0.4rem;
+}
+
+.sub-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+
+.result>button {
+  height: 2.7rem;
+  width: 13rem;
+  background-color: var(--white);
+  border: 2px solid var(--white);
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  color: var(--gray);
+}
+
+.user-side,
+.PC-side {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 35%;
+}
+
+.user-side-text,
+.PC-side-text {
+  letter-spacing: 1.5px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  z-index: 1;
+}
+
+#user-rock,
+#pc-rock {
+  background-image: url("./resources/Group\ 2.png");
+}
+
+#user-scissor,
+#pc-scissor {
+  background-image: url("./resources/Group\ 3.png");
+}
+
+#user-paper,
+#pc-paper {
+  background-image: url("./resources/Group\ 1.png");
+}
+
+.green-background {
+  border: none;
+  box-shadow:
+    0 0 0 10px var(--inside-green) inset,
+    0 0 0 10px var(--inside-green),
+    0 0 0 25px var(--mid-green),
+    0 0 0 40px var(--outside-green);
+  border-radius: 50%;
+}
+
+.winning-screen {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--green);
+  color: var(--white);
+  position: relative;
+  display: none;
+}
+
+.trophy {
+  height: 57%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  padding-bottom: 2.2rem;
+  position: relative;
+}
+
+.stars {
+  height: 80%;
+  width: 50%;
+  position: absolute;
+}
+
+.msgHurray {
+  font-weight: 500;
+  font-size: 5.7rem;
+  letter-spacing: 0.5rem;
+}
+
+.victoryMsg {
+  font-size: 2.3rem;
+  letter-spacing: 0.1rem;
+  height: 10%;
+}
+
+.winnerPlayAgainBtn {
+  height: 2.8rem;
+  width: 12.6rem;
+  border: 2px solid var(--white);
+  background-color: var(--white);
+  border-radius: 0.8rem;
+  color: var(--gray);
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+
+.cross {
+  background-image: url("./resources/redbg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  display: none;
+  position: absolute;
+  bottom: 52%;
+  right: 1%;
+  z-index: 1;
+  border-radius: 47%;
+}
+
+.rules {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 46%;
+  width: 23%;
+  background-color: var(--dark-green);
+  color: var(--white);
+  border: 7px solid var(--white);
+  border-radius: 2rem;
+  padding: 15px 10px;
+  overflow-y: hidden;
+  bottom: 10%;
+  right: 3%;
+  display: none;
+}
+
+.rules>h4 {
+  font-size: 2.3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.rules-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 85%;
+  width: 100%;
+  letter-spacing: 0.07rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 3%;
+}
+
+.rules-list>div {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bullets {
+  width: 17%;
+}
+
+footer {
+
+  bottom: 3%;
+  right: 2.7%;
+  position: fixed;
+}
+
+footer>button {
+  width: 8rem;
+  height: 2.9rem;
+  border: 2px solid var(--white);
+  background: transparent;
+  border-radius: 0.6rem;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  margin-left: 1rem;
+}
+
+.nextBtn {
+  display: none;
+}
+
