@@ -1,1 +1,2 @@
 # RPS-Battle-Arena
+RPS Battle Arena is an engaging and visually appealing Rock-Paper-Scissors game designed for an interactive gaming experience. With vibrant graphics and smooth gameplay, challenge the computer, make strategic choices, and witness the thrill of victory or the agony of defeat. The project combines a user-friendly interface with dynamic animations, providing an entertaining twist to the classic Rock-Paper-Scissors game. Enjoy the game and embrace the nostalgia with RPS Battle Arena!
